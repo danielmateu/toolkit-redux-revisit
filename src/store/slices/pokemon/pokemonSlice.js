@@ -17,6 +17,8 @@ export const pokemonSlice = createSlice({
             state.pokemons = action.payload;
         },
         setPokemons: (state, action) => {
+            state.isLoading = false;
+            state.page = action.payload.page;
             state.pokemons = action.payload;
         }
 
